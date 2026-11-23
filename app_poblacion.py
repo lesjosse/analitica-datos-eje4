@@ -87,7 +87,7 @@ if not df_filtrado.empty:
     resumen_df = df_filtrado.groupby("Country Name")["Poblacion"].agg(["count", "mean", "median", "min", "max"]).round(0)
     st.dataframe(resumen_df, use_container_width=True)
 
-    with st.expander(" Programar / Enviar Reporte al Correo del Estudiante"):
+    with st.expander("Enviar Reporte"):
         dest = st.text_input("Correo destino (tu correo):", placeholder="estudiante@areandina.edu.co")
         rem = st.text_input("Correo remitente (Gmail):", placeholder="usuario@gmail.com")
         pwd = st.text_input("Contraseña de aplicación de Google:", type="password")

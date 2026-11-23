@@ -85,7 +85,7 @@ if not df_p1.empty:
     stats_text = df_p1["Valor"].describe().to_string()
     st.code(stats_text)
 
-    with st.expander(" Programar / Enviar Reporte al Correo del Estudiante"):
+    with st.expander("Enviar Reporte"):
         dest = st.text_input("Correo destino (tu correo):", placeholder="estudiante@areandina.edu.co")
         rem = st.text_input("Correo remitente (Gmail):", placeholder="tu_usuario@gmail.com")
         pwd = st.text_input("Contraseña de aplicación de Google:", type="password")
